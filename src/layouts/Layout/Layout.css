@@ -1,0 +1,49 @@
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+#components-layout-demo-side .logo {
+  height: 32px;
+  background-color: #fafafa;
+  margin: 16px;
+}
+
+.container {
+  background: #fafafa;
+  height: 100%;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn, .ant-tabs-tab:hover, .ant-tabs-tab-btn:hover {
+  color: #7C4DFF !important;
+}
+
+.header-notification {
+  color: #FFFF;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.header-avatar {
+  cursor: pointer;
+}
+
+.header-system {
+  float: left;
+  color: #FFFF;
+  font-size: 1.4rem;
+  text-shadow: 2px 2px 4px #0000001f;
+  cursor: pointer;
+}
+
+.header-system::before {
+  border: 5px solid blue;
+}
+
+.ant-badge-count-sm {
+  min-width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+}

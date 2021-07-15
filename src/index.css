@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* a cada 1rem será considerada 10px */
+  font-size: 62.5%;
+}
+
+body, input, button, textarea {
+  font-family: 400 16px 'Work Sans', 'Stickler', sans-serif;
+}
