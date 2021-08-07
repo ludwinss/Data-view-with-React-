@@ -1,25 +1,27 @@
 import React from "react";
 import { Layout } from "antd";
-
-import Header from "./Header";
 import Menu from "./Menu";
-
+import IconTrackfy from '../../../../Icons/Trackfy';
 import "./SideBar.css";
-
+interface Props{
+  isOpen:boolean
+}
+const { Header } = Layout
 const { Sider } = Layout;
 
-const MainSideMenu: React.FC = () => {
+const MainSideMenu: React.FC<Props> = (props) => {
   return (
     <Sider
       className="side-menu"
-      width={272}
+      collapsed={props.isOpen}
       collapsedWidth={70}
-      trigger={null}
-      collapsible
-      collapsed={false}
     >
-      <Header/>
-      <Menu />
+      {props.isOpen ? null :
+        <Header className="menu-header">
+          <IconTrackfy className="menu-system-title" />
+        </Header>
+      }
+      <Menu isOpen={props.isOpen}/>
     </Sider>
   );
 };

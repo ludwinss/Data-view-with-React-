@@ -1,0 +1,27 @@
+.root-header{
+    background-color: var(--primary);
+    padding:.7em 1em;
+    margin-bottom:8px;
+    position:relative;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.header-search{
+    background:var(--primary-color) !important;
+    font-family:'Titillium Web';
+    font-weight: 300;
+
+}
+.search-items svg{
+    margin-right: 10px;
+}
+
+.button-dropdown{
+    width: 150px;
+    margin-left: 15px;
+}
+
+.datta-picker{ 
+    position: absolute !important;
+    background-color: black;
+    top:30;
+}

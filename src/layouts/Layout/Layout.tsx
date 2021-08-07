@@ -1,7 +1,10 @@
 import React from "react";
-import { Layout } from "antd";
+import { Layout, Button } from "antd";
+import {
+  MenuUnfoldOutlined,
+  MenuFoldOutlined,
+} from '@ant-design/icons'
 
-import ScrollBar from 'react-custom-scrollbars';
 import SideBar from "./components/SideBar/SideBar";
 import Content from "./components/Content";
 
@@ -9,16 +12,21 @@ import "antd/dist/antd.css";
 import "./Layout.css";
 
 const CefLayout: React.FC = () => {
-    return (
-      <Layout style={{ minHeight: "100vh", overflow: "hidden" }}>
-        <SideBar/>
-        <Layout style={{ zIndex: 10 }}>
-          <ScrollBar>
-            <Content />
-          </ScrollBar>
-        </Layout>
+  const [isOpen, setIsOpen] = React.useState(false)
+  return (
+    <Layout >
+      <SideBar isOpen={isOpen} />
+      <div className='button-side'>
+        <Button size='large' shape='circle' onClick={() => setIsOpen(!isOpen)} icon={
+          true ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />
+        }>
+        </Button>
+      </div>
+      <Layout>
+        <Content />
       </Layout>
-    );
+    </Layout>
+  );
 }
 
 export default CefLayout;

@@ -1,14 +1,23 @@
+:root {
+  --backgroud: #fff5de;
+  --primary: #9b72aa;
+  --secundary: #c6b4ce;
+  --text:#3c5186;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Titillium Web", "Work Sans", "Stickler", sans-serif;
+  font-weight: 300;
+  letter-spacing: 2;
 }
-
 html {
   /* a cada 1rem será considerada 10px */
   font-size: 62.5%;
 }
+body{
+  color:var(--text)!important;
 
-body, input, button, textarea {
-  font-family: 400 16px 'Work Sans', 'Stickler', sans-serif;
 }
+
